@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Senac-RS</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<style>
+form {
+        /* Apenas para centralizar o form na página*/
+        margin: 0 auto;
+        width: 400px;
+        /* Para ver as bordas do formulário*/
+        padding: 1em;
+        border: 1px solid#CCC;
+    }
+     form div+div {
+        margin-top: 1em;
+     }
+     label {
+        /*Para ter certeza que todas as labels tem o mesmo tamanho e estão propriamente alinhadas*/
+        display: inline-block;
+        width: 90px;
+        text-align: right;
+     }
+     input, textarea {
+        /*Para certificar que todos os campos tem as mesmas configurações de fonte. Por padrão, textareas devem ter uma fonte monospace */
+        font:1em sans-serif;
+ 
+        /*Para dar o mesmo tamanho a todos os campos de texto*/
+        width: 300px;;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+ 
+        /*Para harmonizar o look & feel das bordas nos campos de texto*/
+        border: 1px solid #999
+     }
+     input:focus, textarea:focus {
+        border-color: blue;
+     }
+     textarea{
+      /*Para alinhar corretamente os campos de texto de várias linhas com sua label*/
+      vertical-align: top;
+ 
+      /*Para dar espaço suficiente para digitar algum texto*/
+      height: 5em;
+ 
+      /*Para permitir aos usuários redimensionarem qualquer textarea verticalmente.
+      Ele não funciona em todos os browsers*/
+      resize: vertical;
+     }
+	 h1 {
+		 font-family : arial;
+		 font-size: 30px;
+		 color: red;
+	 }
+ 
+</style>
+ 
+<body>
+<center><h1> Pizzaria da Mamma: Pedido Online </h1></center>
+<form action="validaform.php" method="post">
+<div>
+<label for="nome">Nome: </label>
+<input type="text" id="nome" />
+</div>
+<br> 
+<div>
+<label for="nome">Endereço: </label>
+<input type="text" id="nome" />
+</div>
+<br> 
+<div>        
+<label for="sabor">Sabor da pizza:</label>
+<br>
+<select id="sabor" name="sabor">
+<option value="calabresa"> Calabresa</option>
+<option value="filé com palha">Filé com palha</option>
+<option value="Quatro Queijos">Quatro queijos</option>
+<option value="Frango com catupiry">Frango com catupiry</option>
+<option value="Vegetariana">Vegetariana</option>
+<option value="Portuguesa">Portuguesa</option>
+<option value="Picanha com alho">Picanha com alho</option>
+
+</select>
+<br>  
+<div>
+<label for="bebida">Bebida:</label>
+<br>
+<select id="bebida" name="bebida">
+<option value="refrigerante">Refrigerante</option>
+<option value="suco">Suco</option>
+<option value="agua">Água</option>
+<option value="cerveja">Cerveja</option>
+</select>
+</div>
+<br> 
+<div>
+<label for="nome">Valor: </label>
+<input type="text" id="nome" value="23,75" />
+<br>
+             
+<label for="pagamento">Escolha o tipo de pagamento:</label>
+<br>
+<select id="pagamento" name="pagamento">
+<option value="pix">PIX</option>
+<option value="dinheiro">Dinheiro</option>
+<option value="credito">Crédito</option>
+<option value="debito">Débito</option>
+</select>
+<br>
+                
+
+<div class="button">
+<button type="submit">Enviar Pedido</button>
+</div>
+<div class="button">
+<button type="reset">Cancelar Pedido</button>
+</div>
+</form>     
+ 
+ 
+</body>
+</html>

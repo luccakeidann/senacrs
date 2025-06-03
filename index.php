@@ -144,6 +144,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             echo "Nome: $nome <br>";
             echo "E-mail: $email <br>";
             echo "Fone: $fone <br>" ;
+            // Conectar o banco de dados
+            $caminho_banco = 'BDschoolmusic.db';
+            $pdo = new PDO("sqlite:" . $caminho_banco);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            echo "Conexão com o banco de dados SQlite estabelecida"
+            . "com sucesso!<br>";
+            //
+            $sql_inserir = "
+             INSERT INTO alunos (id_aluno, nome, email, fone, ativo)
+             VALUES ($codigo, $nome, $email, $fone, 'A');
+             ";
+            $pdo->exec($sql_inserir);
+            echo "Aluno cadastrado com sucesso!";
         }
         ?>
     </body>

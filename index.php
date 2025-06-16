@@ -6,15 +6,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Loja Dia dos Namorados</title>
+        <title></title>
     </head>
     <body>
         <?php
-        // Conectar o banco de dados
-        $caminho_banco = 'BDlojalucca.db';
-        $pdo = new PDO ("sqlite:" . $caminho_banco);
-        $pdo->setAttribute (PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Conexão com o banco de dados SQlite realizada com sucesso!<br>"
+        // put your code here
         ?>
     </body>
 </html>

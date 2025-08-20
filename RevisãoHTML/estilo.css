@@ -1,0 +1,30 @@
+ *body{
+    margin: 0px;
+    padding: 0px;
+    
+ }
+ #topo{
+    width: 980px;
+    height: 200px;
+    margin: auto;
+ }
+ #menu{
+    width: 980px;
+    height: 100px;
+    margin: auto;
+    text-align: center;
+    word-spacing: 200px;
+ }
+ #topo img{
+    float: left;
+    padding: 10px 10px 10px 10px;
+ }
+ #menu a{
+    color:blue;
+    text-align: center;
+    text-decoration: none;
+ }
+ #menu a:hover{
+    color:rgb(43, 198, 226);
+
+ }
